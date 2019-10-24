@@ -1,0 +1,14 @@
+$(function(message) {
+  console.log(message)
+  let message_text = (<%= @message.body %>)
+  let message_id = (<%= @message.id %>)
+  // var html = `<div class="action">${message_text}</div>`
+  let html =`
+  <tbody>
+      <tr>
+      <td><a href="/messages/${message_id}">Show</td>
+      <td>${message_text}</td>
+      </tr>
+  </tbody>`
+        $("#message").append(html)
+    })

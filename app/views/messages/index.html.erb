@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Messages</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody id="message">
+    <% @messages.each do |message| %>
+      <tr>
+        <td><%= link_to 'Show', message %></td>
+        <td><%= link_to 'Edit', edit_message_path(message) %></td>
+        <td><%= link_to 'Destroy', message, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td><%= message.body %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<%= link_to 'New Message', new_message_path%>
+
+<%= form_with model: @message do |f| %>
+<%= f.text_field :text %>
+<%= f.submit '送信ボタン', class: "btn" %>
+<% end %>
+
+
+
+
+---------------------------------
+<div id='chat_messages'>
+</div>
+<br/>
+<div class="aaa"><%= @message.body %></div>
+<form>
+  <label>
+    websocketsで送信: <input type="text" data-behavior="speak_chat_messages">
+  </label>
+</form>
