@@ -7,20 +7,8 @@ Things you may want to cover:
 
 * Ruby version
   2.5.1
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
 * 自分のtest用リポジトリ
 
 気になる物を作成したりする場所です。
+
+現在は、web socketsを用いて、双方向通信を行なった。簡単な chat appを作成。
